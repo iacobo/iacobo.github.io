@@ -1,30 +1,42 @@
-#### Comedy
+### Audio series
 
-- [No Such Thing As A Fish](https://www.nosuchthingasafish.com/)
-- John Finnemore
-  - [John Finnemore's Souvenir Programme](https://www.bbc.co.uk/sounds/brand/b01mk97n)
-  - [Double Acts](https://www.bbc.co.uk/programmes/b08t17yt)
-  - [Cabin Pressure](https://www.bbc.co.uk/sounds/brand/b00lmcxj)
+#### Comedy
+- [John Finnemore's Souvenir Programme](https://www.bbc.co.uk/sounds/brand/b01mk97n)
+- [Double Acts](https://www.bbc.co.uk/programmes/b08t17yt)
+- [Cabin Pressure](https://www.bbc.co.uk/sounds/brand/b00lmcxj)
 
 #### Sci-Fi
-
 - [The Program Audio Series](https://www.programaudioseries.com/)
-- Black Mirror (s1-3)
-- Ted Chiang (all)
-  - Stories of Your Life
-    - [Division By Zero](https://fantasticmetropolis.com/i/division)
-    - [The Truth of Fact, The Truth of Feeling](https://archive.org/details/ted-chiang-the-truth-of-fact-the-truth-of-feeling)
-  - Exhalation
-- Devs
-- San-Ti
-- Westworld (s1)
-- Serial Experiments Lain
-
+  
 #### Horror
-
 - [The Lovecraft Investigations](https://www.bbc.co.uk/programmes/p06spb8w) (s1-3)
 - [The Magnus Archives](https://rustyquill.com/show/the-magnus-archives/)
 
-#### Drama
+---
 
-- 
+### Short Stories
+- Stories of Your Life
+  - [Division By Zero](https://fantasticmetropolis.com/i/division)
+  - [The Truth of Fact, The Truth of Feeling](https://archive.org/details/ted-chiang-the-truth-of-fact-the-truth-of-feeling)
+- Exhalation
+- [Despoilers of the Golden Empire](https://www.gutenberg.org/files/24091/24091-h/24091-h.htm)
+- [The Ones Who Walk Away From Omelas](https://files.libcom.org/files/ursula-k-le-guin-the-ones-who-walk-away-from-omelas.pdf)
+- [The Lottery](https://fullreads.com/literature/the-lottery/)
+
+---
+
+### Novels
+
+- San-Ti
+- Shogun
+- His Dark Materials
+
+### Series
+- Black Mirror (s1-3)
+- Devs
+- Westworld (s1)
+- Serial Experiments Lain
+
+---
+
+### Films
