@@ -15,6 +15,7 @@
 ---
 
 ### Short Stories
+- [The Lives of Animals](https://sites.evergreen.edu/anthrozoology/wp-content/uploads/sites/142/2015/11/Coetzee99.pdf)
 - Stories of Your Life
   - [Division By Zero](https://fantasticmetropolis.com/i/division)
   - [The Truth of Fact, The Truth of Feeling](https://archive.org/details/ted-chiang-the-truth-of-fact-the-truth-of-feeling)
@@ -27,7 +28,7 @@
 
 ### Novels
 
-- San-Ti
+- Remembrance of Earth's Past
 - Shogun
 - His Dark Materials
 
@@ -40,3 +41,5 @@
 ---
 
 ### Films
+
+- In The Mood for Love
