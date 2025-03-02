@@ -47,7 +47,7 @@ My background is in maths, but my work over the past few years has focused on in
 
 <p align="center">
 <a href="https://www.privacyguides.org/en/tools/" target="_blank"><img alt="Privacy Guides" height ="30px" src="https://www.privacyguides.org/en/assets/brand/logos/svg/logo/privacy-guides-logo-notext-darkbg.svg#only-dark"></a>
-<a href="https://alternativeto.net/platform/linux/?feature=no-tracking%2Cad-free%2Cprivacy-protection&license=opensource" target="_blank"><img alt="Alternativeto" height ="30px" src="https://community.adobe.com/t5/image/serverpage/image-id/600188i4B5E381374424CCE?v=v2"></a>
+<a href="https://alternativeto.net/platform/linux/?feature=no-tracking%2Cad-free%2Cprivacy-protection&license=opensource" target="_blank"><img alt="Alternativeto" height ="30px" src="https://img.favpng.com/17/14/15/logo-scalable-vector-graphics-portable-network-graphics-computer-icons-alternativeto-png-favpng-5wvahUqyzPsN8cTSPWzgNuwuy.jpg"></a>
 </p>
 
 <!-- 
