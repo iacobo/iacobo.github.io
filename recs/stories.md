@@ -1,4 +1,4 @@
-#### [Audio Series](/audio)   [Short Stories](/stories)   [Novels](/novels)
+#### [Audio Series](/recs/audio)   [Short Stories](/recs/stories)   [Novels](/recs/novels)
 
 ---
 
