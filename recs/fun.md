@@ -1,0 +1,42 @@
+#### [Audio Series](/recs/audio)   [Short Stories](/recs/stories)   [Novels](/recs/novels)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=ZxRC94Z1Q9hziQOT&amp;list=PLDb22nlVXGgegX0YmyK_hXjZl8hj_hbqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [Overly Sarcastic Productions](https://www.youtube.com/playlist?list=PLDb22nlVXGgegX0YmyK_hXjZl8hj_hbqA)
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=lvtn6-VGTPASWB__&amp;list=PL2w4TvBbdQ3sMABf317ExCob_v6rW2-4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [Every Frame a Painting]()
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/P4J16GzUJ28?si=mIqwQmjigYCbPXGP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [Alt Shift X]()
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=FWILBQSpBf_CiZk1&amp;list=PLz1BoHsdH83y66AJy3z0Sy8y2MYLqJR3V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- John Finnemore's Souvenir Program
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=agt83EzrpYtDaqxy&amp;list=PLmndC88JBHjb2vpybkL0CgppjDEwC-x76" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- Suckerpinch
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=Bzh4pOfQRF7TcFAC&amp;list=PL34EA971FCA058B20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- Captain Disillusion
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=Aa4n4jm7pCWrbXkz&amp;list=PL4V5MsSrz9qd0uFXooXFWajMZp9B_5fdd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- Your Dinosaurs are Wrong
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/abO5HPo9l_c?si=dsYf-NSVI5Y7y7_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- Puzzles
+
+- Knight Scoop
+
+- Japanology
