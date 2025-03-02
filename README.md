@@ -29,8 +29,14 @@ My background is in maths, but my work over the past few years has focused on in
 <p align="center">
 <a href="https://pytorch.org/" target="_blank"><img src="https://raw.githubusercontent.com/rahul-jha98/github_readme_icons/main/language_and_tools/square/pytorch/pytorch.svg" alt="pytorch" height="30px" style="filter: grayscale(1);"/></a>
 <a href="https://www.python.org" target="_blank"><img alt="Python" height ="30px" src="https://raw.githubusercontent.com/rahul-jha98/github_readme_icons/main/language_and_tools/square/python/python.svg" style="filter: grayscale(1);"></a>
-<a href="https://vscodium.com/" target="_blank"><img alt="VSCodium" height ="30px" src="https://github.com/VSCodium/icons/blob/main/icons/linux/nobg/blue1/paulo22s.png?raw=true" style="filter: grayscale(1);"></a>
 <a href="https://www.iso.org/standard/76583.html" target="_blank"><img alt="SQL" height ="30px" src="https://avatars.githubusercontent.com/u/177543?s=200&v=4" style="filter: grayscale(1);"></a>
+</p>
+<p align="center">
+<a href="https://neovim.io/" target="_blank"><img alt="NeoVim" height ="30px" src="https://logosrated.net/wp-content/uploads/parser/Neovim-Logo-1.png" style="filter: grayscale(1);"></a>
+<a href="https://vscodium.com/" target="_blank"><img alt="VSCodium" height ="30px" src="https://github.com/VSCodium/icons/blob/main/icons/linux/nobg/blue1/paulo22s.png?raw=true" style="filter: grayscale(1);"></a>
+</p>
+<p align="center">
+<a href="https://fedoraproject.org/" target="_blank"><img alt="Fedora" height ="30px" src="https://cdn.freebiesupply.com/logos/large/2x/fedora-1-logo-png-transparent.png" style="filter: grayscale(1);"></a>
 </p>
 
 <!-- 
