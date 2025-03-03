@@ -3,9 +3,13 @@
 ---
 
 ### Short Stories
+
 - [The Lives of Animals](https://sites.evergreen.edu/anthrozoology/wp-content/uploads/sites/142/2015/11/Coetzee99.pdf)
 - [The Ones Who Walk Away From Omelas](https://files.libcom.org/files/ursula-k-le-guin-the-ones-who-walk-away-from-omelas.pdf)
 - [Hiroshima](https://www.newyorker.com/magazine/1946/08/31/hiroshima) ([archive](https://archive.org/details/in.ernet.dli.2015.165959/page/n17/mode/2up))
+- [Why Socialism?](https://monthlyreview.org/2009/05/01/why-socialism/)
+
+---
 
 - [The Lottery](https://fullreads.com/literature/the-lottery/)
 - Exhalation
