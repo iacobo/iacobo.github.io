@@ -10,7 +10,11 @@
 </p>
 -->
 
-#### [Short Stories](/recs/stories)   [Novels](/recs/novels)   [Speeches](/recs/important)   |   [Audio Series](/recs/audio)   [Videos](/recs/fun)
+#### Recs: [Short Stories](/recs/stories)   [Novels](/recs/novels)   [Speeches](/recs/important)
+
+#### Fun: [Audio Series](/recs/audio)   [Videos](/recs/fun)
+
+#### Proj: [Iffley Bouldering Routes](/iffley/home)
 
 ---
 
