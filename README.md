@@ -56,7 +56,7 @@ https://www.ditchqwerty.com/
 <a href="https://vscodium.com/" target="_blank"><img alt="VSCodium" height ="30px" src="https://github.com/VSCodium/icons/blob/main/icons/linux/nobg/blue1/paulo22s.png?raw=true" style="filter: grayscale(1);"></a>
 </p>
 -->
-<a href="https://fedoraproject.org/" target="_blank"><img alt="Fedora" height ="30px" src="https://cdn.freebiesupply.com/logos/large/2x/fedora-1-logo-png-transparent.png" style="filter: grayscale(1);"></a>
+<a href="https://fedoraproject.org/" target="_blank"><img alt="Fedora" height ="30px" src="https://www.marefa.org/w/images/thumb/4/41/Fedora_icon_(2021).svg/1200px-Fedora_icon_(2021).svg.png" style="filter: grayscale(1);"></a>
 </p>
 
 
