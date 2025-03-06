@@ -25,8 +25,9 @@ Donate</br>
 <a href="https://www.shelter.org.uk/" target="_blank"><img alt="Shelter" height ="60px" src="https://images.ctfassets.net/6sxvmndnpn0s/1qQWlJLKM5rpZHETE32eLX/fc3c1d9f75930f9f5e4d4d0754806ec7/logo--d-england.png"></a> &nbsp; <a href="https://www.pcrf.net/" target="_blank"><img alt="PCRF" height ="60px" src="https://www.pcrf.net/assets/images/logo.png.webp"></a>
 </p>
 
-<hr>
-
-<h1 id="do-it-for-the-animals-they-don't-want-to-suffer" align="center"><a href="https://www.govegan.org.uk/why-go-vegan/" style="color: #29bf12">🌱 GO VEGAN! 🌱</a></h2>
+<p align="center">
+---
+</p>
+<h1 id="do-it-for-the-animals-they-don't-want-to-suffer" align="center">🌱<a href="https://www.govegan.org.uk/why-go-vegan/" style="color: #29bf12">GO VEGAN!</a>🌱</h2>
 <p align="center">Animals don't want to suffer, either.</p>
 </body>
