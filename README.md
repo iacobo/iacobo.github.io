@@ -7,8 +7,7 @@
 </head>
 
 <body>
-
-<h4 id="header-rec"><a href="/"><b>[j]</b></a> <a href="/recs/important">Read</a> <a href="/recs/media">Fun</a> <a href="/iffley/home">Proj</a> <strike><a href="/recs/tech">Google</a></strike></h4>
+<h4 id="header-rec"><a href="/"><b>[j]</b></a> <a href="/recs/important">Read</a> <a href="/recs/media">Fun</a> <a href="/iffley/home">Proj</a> <strike><a href="/recs/tech">Google</a></strike></h4>
 <hr>
 
 <p>
