@@ -1,6 +1,7 @@
 body {
   margin: 40px auto;
-  max-width: 650px;
+  width:100%;
+  max-width: 640px;
   line-height: 1.6;
   font-size: 18px;
   color: #444;
