@@ -5,17 +5,16 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href=".assets/style.css" />
     <link rel="icon" type="image/png" sizes="96x96" href=".assets/favicon-96x96.png">
-    <title>[j]acob</title>
 </head>
 
 <body>
     <nav>
         <h4>
-            <a href="/"><b>[j]</b></a>
-            <a href="/recs/important">Read</a>
-            <a href="/recs/media">Fun</a>
-            <a href="/iffley/home">Proj</a>
-            <strike><a href="/recs/tech">Google</a></strike>
+            <a href="https://iacobo.github.io/"><b>[j]</b></a>
+            <a href="https://iacobo.github.io/recs/important">Read</a>
+            <a href="https://iacobo.github.io/recs/media">Fun</a>
+            <a href="https://iacobo.github.io/iffley/home">Proj</a>
+            <strike><a href="https://iacobo.github.io/recs/tech">Google</a></strike>
         </h4>
     </nav>
     <hr />
@@ -27,7 +26,7 @@
   <p align="center">
       <br>
       -----------------------------------------<br>
-      You can make a difference - please donate<br>
+      You can make a difference - please donate!<br>
       -----------------------------------------<br>
       <br>
       <a href="https://www.shelter.org.uk/" target="_blank"><img alt="Shelter" height="60px"
