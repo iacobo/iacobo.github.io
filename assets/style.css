@@ -1,0 +1,15 @@
+body {
+  margin: 40px auto;
+  width: 95vw;
+  max-width: 640px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #444;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+h1, h2, h3, h4, summary
+{
+  line-height: 1.2;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
