@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="../assets/style.css">
     <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96x96.png">
     <title>Fun</title>
+
+    <style>
+  .library {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .shelf {
+    display: flex;
+    gap: 8px;
+  }
+  .book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cover {
+    max-height: 200px;
+    height: auto;
+  }
+  .title {
+    margin-top: 8px;
+    font-weight: bold;
+  }
+</style>
 </head>
 
 <body>
@@ -90,6 +115,199 @@
             </tr>
         </thead>
     </table>
+
+    <h3>Bookshelf</h3>
+
+    <div class="library" id="library"></div>
+
+<script>
+  // Define the books for each shelf, each with their cover options
+  const shelves = [
+    {
+      books: [
+        {
+          title: "The Communist Manifesto",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141395906/9780141395906-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9781784873691/9781784873691-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141397986/9780141397986-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141018935/9780141018935-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9781784873691/9781784873691-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780099540748/9780099540748-jacket-large.jpg"]
+        },
+        {
+          title: "The Handmaid's Tale",
+          covers: [
+          "https://blackwells.co.uk/jacket/500x500/9781784874872.webp", 
+          "https://blackwells.co.uk/jacket/500x500/9781784879679.webp", 
+          "https://blackwells.co.uk/jacket/500x500/9780099511663.webp", 
+          "https://blackwells.co.uk/jacket/500x500/9781784871444.webp"]
+        },
+        {
+          title: "V for Vendetta",
+          covers: [
+          "https://blackwells.co.uk/jacket/500x500/9781401285005.webp", 
+          "https://blackwells.co.uk/jacket/500x500/9781779523396.webp", 
+          "https://blackwells.co.uk/jacket/500x500/9781401207922.webp", 
+          "https://blackwells.co.uk/jacket/500x500/9781799503132.webp"]
+        },
+        {
+          title: "1984",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241453513/9780241453513-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241341650/9780241341650-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780718193645/9780718193645-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9781529962253/9781529962253-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241416419/9780241416419-jacket-large.jpg"]
+        },
+        {
+          title: "Never Let Me Go",
+          covers: [
+          "https://www.faber.co.uk/wp-content/uploads/2025/01/Never-Let-Me-Go-429x690.jpg", 
+          "https://www.faber.co.uk/wp-content/uploads/2025/01/Never-Let-Me-Go-1-450x690.jpg", 
+          "https://www.faber.co.uk/wp-content/uploads/2024/12/Never-Let-Me-Go-2-450x690.jpg", 
+          "https://www.faber.co.uk/wp-content/uploads/2021/09/Never-Let-Me-Go-1-435x690.jpg", 
+          "https://i0.wp.com/www.thebooksmugglers.com/wp-content/uploads/2009/10/Never_Let_Me_Go.jpg", 
+          "https://d3ddkgxe55ca6c.cloudfront.net/assets/t1565882936/a/e5/60/194171-ml-1897983.jpg"]
+
+        },
+      ]
+    },
+    {
+      books: [
+        {
+          title: "Dracula",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141196886/9780141196886-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9781529954319/9781529954319-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141199337/9780141199337-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780143106166/9780143106166-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241411155/9780241411155-jacket-large.jpg"]
+        },
+        {
+          title: "Poe",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241789896/9780241789896-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241739846/9780241739846-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241573754/9780241573754-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141397269/9780141397269-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241746714/9780241746714-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141198972/9780141198972-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9781529954333/9781529954333-jacket-large.jpg"]
+        },
+        {
+          title: "MR James",
+          covers: [
+          "", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241341629/9780241341629-jacket-large.jpg"]
+        },
+        {
+          title: "Turn of the Screw",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241552650/9780241552650-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141199757/9780141199757-jacket-large.jpg"]
+        },
+        {
+          title: "Lafcadio Hearn",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241746875/9780241746875-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241573723/9780241573723-jacket-large.jpg"]
+        },
+        {
+          title: "Lovecraft",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241341315/9780241341315-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9781405972901/9781405972901-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780142180037/9780142180037-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141182346/9780141182346-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780142437957/9780142437957-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241443934/9780241443934-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141968544/9780141968544-jacket-large.jpg",
+          "https://blackwells.co.uk/jacket/500x500/9781435122963.webp",
+          "https://blackwells.co.uk/jacket/500x500/9781667209708.webp",
+          ]
+        },
+      ]
+    },
+    {
+      books: [
+        {
+          title: "Earthsea",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141354910/9780141354910-jacket-large.jpg", 
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241956878/9780241956878-jacket-large.jpg", 
+          "https://store.gollancz.co.uk/cdn/shop/products/9781473223547-original.jpg", 
+          "https://store.gollancz.co.uk/cdn/shop/products/9781473223561-original.jpg", 
+          "https://store.gollancz.co.uk/cdn/shop/products/9781473223578-original.jpg", 
+          "https://store.gollancz.co.uk/cdn/shop/products/9781473223585-original.jpg", 
+          "https://store.gollancz.co.uk/cdn/shop/products/9781473223592-original.jpg", 
+          "https://store.gollancz.co.uk/cdn/shop/products/9781399602426-original.jpg", 
+          "https://store.gollancz.co.uk/cdn/shop/products/9781399602419-original.jpg"]
+        },
+        {
+          title: "Shogun",
+          covers: [
+          ""]
+        },
+        {
+          title: "Journey to the West",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141393445/9780141393445-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241752401/9780241752401-jacket-large.jpg&w=614&q=100"]
+        },
+        {
+          title: "Marco Polo",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141198774/9780141198774-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780241253052/9780241253052-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141906577/9780141906577-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141964881/9780141964881-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141963907/9780141963907-jacket-large.jpg",
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141398365/9780141398365-jacket-large.jpg"
+          ]
+        },
+        {
+          title: "The Count of Monte Cristo",
+          covers: [
+          "https://cdn.penguin.co.uk/dam-assets/books/9780141392462/9780141392462-jacket-large.jpg"]
+        },
+        {
+          title: "Kiki's Delivery Service",
+          covers: ["https://cdn.penguin.co.uk/dam-assets/books/9780241725146/9780241725146-jacket-large.jpg"]
+        },
+      ]
+    },
+  ];
+
+  const libraryContainer = document.getElementById('library');
+
+  shelves.forEach(shelf => {
+    const shelfDiv = document.createElement('div');
+    shelfDiv.className = 'shelf';
+
+    shelf.books.forEach(book => {
+      // Randomly select a cover variant for this book
+      const randomCover = book.covers[Math.floor(Math.random() * book.covers.length)];
+
+      const bookDiv = document.createElement('div');
+      bookDiv.className = 'book';
+
+      const img = document.createElement('img');
+      img.src = randomCover;
+      img.className = 'cover';
+
+      const title = document.createElement('div');
+      title.className = 'title';
+      title.textContent = book.title;
+
+      bookDiv.appendChild(img);
+      shelfDiv.appendChild(bookDiv);
+    });
+
+    // Append the shelf to the library
+    libraryContainer.appendChild(shelfDiv);
+  });
+</script>
 
     <details>
         <summary><b>YouTube</b></summary>
