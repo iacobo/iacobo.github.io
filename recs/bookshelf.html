@@ -2,41 +2,46 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style.css">
-    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96x96.png">
-    <title>Bookshelf</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96x96.png">
+  <title>Bookshelf</title>
 
-    <style>
-  .library {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .shelf {
-    display: flex;
-    gap: 8px;
-  }
-  .book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .cover {
-    max-height: 150px;
-    height: auto;
-  }
-  .title {
-    margin-top: 8px;
-    font-weight: bold;
-  }
-</style>
+  <style>
+    .library {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .shelf {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .book {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cover {
+      max-height: 150px;
+      height: auto;
+    }
+
+    .title {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div style="
+  <div style="
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -49,8 +54,8 @@
       background-color: #ffffff; /* white */
       color: #18181b; /* zinc-900 */
     ">
-      🇵🇸 Call for a #CeasefireNOW 🇵🇸
-      <a href="https://techforpalestine.org/learn-more" target="_blank" style="
+    🇵🇸 Call for a #CeasefireNOW 🇵🇸
+    <a href="https://techforpalestine.org/learn-more" target="_blank" style="
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -65,322 +70,306 @@
         text-decoration: none;
         transition: background-color 0.2s;
       " onmouseover="this.style.backgroundColor='#166534'" onmouseout="this.style.backgroundColor='#15803d'">
-        Learn
-      </a>
-    </div>
+      Learn
+    </a>
+  </div>
 
-    <nav>
-        <h4>
-            <a href="/"><b>[j]</b></a>
-            <a href="/recs/important">[Read]</a>
-            <a href="/recs/bookshelf">[Bookshelf]</a>
-            <a href="/recs/media">[AV]</a>
-            <a href="/recs/proj">[Proj]</a>
-            <strike><a href="/recs/tech">[Google]</a></strike>
-        </h4>
-    </nav>
-    <hr>
+  <nav>
+    <h4>
+      <a href="/"><b>[j]</b></a>
+      <a href="/recs/important">[Read]</a>
+      <a href="/recs/bookshelf">[Bookshelf]</a>
+      <a href="/recs/media">[AV]</a>
+      <a href="/recs/proj">[Proj]</a>
+      <strike><a href="/recs/tech">[Google]</a></strike>
+    </h4>
+  </nav>
+  <hr>
 
-    <h3>Bookshelf</h3>
+  <h3>Bookshelf</h3>
 
-    <div class="library" id="library"></div>
+  <div class="library" id="library"></div>
 
-<script>
-  // Define the books for each shelf, each with their cover options
-  const shelves = [
-    {
-      books: [
-        {
-          title: "The Handmaid's Tale",
-          covers: [
-          "https://blackwells.co.uk/jacket/500x500/9781784874872.webp", 
-          "https://blackwells.co.uk/jacket/500x500/9781784879679.webp", 
-          "https://blackwells.co.uk/jacket/500x500/9780099511663.webp"]
-        },
-        {
-          title: "Never Let Me Go",
-          covers: [
-          "https://www.faber.co.uk/wp-content/uploads/2025/01/Never-Let-Me-Go-429x690.jpg",
-          "https://www.faber.co.uk/wp-content/uploads/2024/12/Never-Let-Me-Go-2-450x690.jpg", 
-          "https://www.faber.co.uk/wp-content/uploads/2021/09/Never-Let-Me-Go-1-435x690.jpg",
-          "https://d3ddkgxe55ca6c.cloudfront.net/assets/t1565882936/a/e5/60/194171-ml-1897983.jpg"]
-        },
-        {
-          title: "Flowers for Algernon",
-          covers: [
-          "https://upload.wikimedia.org/wikipedia/en/e/ea/FlowersForAlgernon.jpg"]
-        },
-        {
-          title: "V for Vendetta",
-          covers: [
-          "https://blackwells.co.uk/jacket/500x500/9781401285005.webp", 
-          "https://blackwells.co.uk/jacket/500x500/9781779523396.webp", 
-          "https://blackwells.co.uk/jacket/500x500/9781401207922.webp", 
-          "https://blackwells.co.uk/jacket/500x500/9781799503132.webp"]
-        },
-        {
-          title: "1984",
-          covers: [
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241453513/9780241453513-jacket-large.jpg", 
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241341650/9780241341650-jacket-large.jpg",
-          "https://upload.wikimedia.org/wikipedia/commons/5/51/1984_first_edition_cover.jpg"]
-        },
-        {
-          title: "451",
-          covers: [
-          "https://i.harperapps.com/hcuk/covers/9780007491568/x400.jpg",
-          "https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_1st_ed_cover.jpg",
+  <script>
+    // Define the books for each shelf, each with their cover options
+    const shelves = [
+      {
+        books: [
+          {
+            title: "The Handmaid's Tale",
+            covers: [
+              "https://blackwells.co.uk/jacket/500x500/9781784874872.webp",
+              "https://blackwells.co.uk/jacket/500x500/9781784879679.webp",
+              "https://blackwells.co.uk/jacket/500x500/9780099511663.webp"]
+          },
+          {
+            title: "Never Let Me Go",
+            covers: [
+              "https://www.faber.co.uk/wp-content/uploads/2025/01/Never-Let-Me-Go-429x690.jpg",
+              "https://www.faber.co.uk/wp-content/uploads/2024/12/Never-Let-Me-Go-2-450x690.jpg",
+              "https://www.faber.co.uk/wp-content/uploads/2021/09/Never-Let-Me-Go-1-435x690.jpg",
+              "https://d3ddkgxe55ca6c.cloudfront.net/assets/t1565882936/a/e5/60/194171-ml-1897983.jpg"]
+          },
+          {
+            title: "V for Vendetta",
+            covers: [
+              "https://blackwells.co.uk/jacket/500x500/9781401285005.webp",
+              "https://blackwells.co.uk/jacket/500x500/9781779523396.webp",
+              "https://blackwells.co.uk/jacket/500x500/9781401207922.webp",
+              "https://blackwells.co.uk/jacket/500x500/9781799503132.webp"]
+          },
+          {
+            title: "1984",
+            covers: [
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241453513/9780241453513-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241341650/9780241341650-jacket-large.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/5/51/1984_first_edition_cover.jpg"]
+          },
+          {
+            title: "451",
+            covers: [
+              "https://i.harperapps.com/hcuk/covers/9780007491568/x400.jpg",
+              "https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_1st_ed_cover.jpg",
+            ]
+          },
+          {
+            title: "Flowers for Algernon",
+            covers: [
+              "https://upload.wikimedia.org/wikipedia/en/e/ea/FlowersForAlgernon.jpg"]
+          },
         ]
-        }
-      ]
-    },
-    {
-      books: [
-        {
-          title: "Animals",
-          covers: [
-          "https://i.pinimg.com/736x/85/98/01/859801a4599c05e86d99160622511b0e.jpg",
+      },
+      {
+        books: [
+          {
+            title: "Animals",
+            covers: [
+              "https://i.pinimg.com/736x/85/98/01/859801a4599c05e86d99160622511b0e.jpg",
+            ]
+          },
+          {
+            title: "Hiroshima",
+            covers: [
+              "https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9780141041865%2F9780141041865-jacket-large.jpg&w=819&q=100",
+              "https://m.media-amazon.com/images/I/91+C0LWcENL._SL1500_.jpg",
+              "https://m.media-amazon.com/images/I/81NMCTeF8YL._SY466_.jpg",
+              "https://static.wixstatic.com/media/682c9a_7322b53939ee4d88abf79361c6dd192f~mv2.jpg"
+            ]
+          },
+          {
+            title: "Greta",
+            covers: [
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241453445/9780241453445-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241514573/9780241514573-jacket-large.jpg"
+            ]
+          },
+          {
+            title: "Gandhi",
+            covers: [
+              "https://cdn11.bigcommerce.com/s-gibnfyxosi/products/79695/images/81512/51GoBykbNfL__06234.1615533173.386.513.jpg",
+            ]
+          },
+          {
+            title: "The Communist Manifesto",
+            covers: [
+              "https://cdn.penguin.co.uk/dam-assets/books/9780141395906/9780141395906-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9781784873691/9781784873691-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780141397986/9780141397986-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780141018935/9780141018935-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9781784873691/9781784873691-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780099540748/9780099540748-jacket-large.jpg"]
+          },
+          {
+            title: "Chomsky",
+            covers: [
+              "https://cdn.penguin.co.uk/dam-assets/books/9781847920645/9781847920645-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241964019/9780241964019-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780141399515/9780141399515-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241973523/9780241973523-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780099533115/9780099533115-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241981979/9780241981979-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241482612/9780241482612-jacket-large.jpg",
+            ]
+          },
         ]
-        },
-        {
-          title: "Hiroshima",
-          covers: [
-            "https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9780141041865%2F9780141041865-jacket-large.jpg&w=819&q=100",
-            "https://m.media-amazon.com/images/I/91+C0LWcENL._SL1500_.jpg",
-            "https://m.media-amazon.com/images/I/81NMCTeF8YL._SY466_.jpg",
-            "https://static.wixstatic.com/media/682c9a_7322b53939ee4d88abf79361c6dd192f~mv2.jpg"
-        ]
-        },
-        {
-          title: "Greta",
-          covers: [
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241453445/9780241453445-jacket-large.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241514573/9780241514573-jacket-large.jpg"
-        ]
-        },
-        {
-          title: "Gandhi",
-          covers: [
-          "https://cdn11.bigcommerce.com/s-gibnfyxosi/products/79695/images/81512/51GoBykbNfL__06234.1615533173.386.513.jpg",
-        ]
-        },
-        {
-          title: "The Communist Manifesto",
-          covers: [
-          "https://cdn.penguin.co.uk/dam-assets/books/9780141395906/9780141395906-jacket-large.jpg", 
-          "https://cdn.penguin.co.uk/dam-assets/books/9781784873691/9781784873691-jacket-large.jpg", 
-          "https://cdn.penguin.co.uk/dam-assets/books/9780141397986/9780141397986-jacket-large.jpg", 
-          "https://cdn.penguin.co.uk/dam-assets/books/9780141018935/9780141018935-jacket-large.jpg", 
-          "https://cdn.penguin.co.uk/dam-assets/books/9781784873691/9781784873691-jacket-large.jpg", 
-          "https://cdn.penguin.co.uk/dam-assets/books/9780099540748/9780099540748-jacket-large.jpg"]
-        },
-        {
-          title: "Chomsky",
-          covers: [
-          "https://cdn.penguin.co.uk/dam-assets/books/9781847920645/9781847920645-jacket-large.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241964019/9780241964019-jacket-large.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780141399515/9780141399515-jacket-large.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241973523/9780241973523-jacket-large.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780099533115/9780099533115-jacket-large.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241981979/9780241981979-jacket-large.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241482612/9780241482612-jacket-large.jpg",
-        ]
-        },
-      ]
-    },
-    {
-      books: [
-        {
-          title: "Earthsea",
-          covers: [
-          "https://upload.wikimedia.org/wikipedia/en/5/59/AWizardOfEarthsea%281stEd%29.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780141354910/9780141354910-jacket-large.jpg",
-          "https://store.gollancz.co.uk/cdn/shop/products/9781473223547-original.jpg", 
-          "https://store.gollancz.co.uk/cdn/shop/products/9781473223561-original.jpg", 
-          "https://store.gollancz.co.uk/cdn/shop/products/9781473223578-original.jpg", 
-          "https://store.gollancz.co.uk/cdn/shop/products/9781473223585-original.jpg", 
-          "https://store.gollancz.co.uk/cdn/shop/products/9781473223592-original.jpg", 
-          "https://store.gollancz.co.uk/cdn/shop/products/9781399602426-original.jpg", 
-          "https://store.gollancz.co.uk/cdn/shop/products/9781399602419-original.jpg",
-        ]
-        },
-        {
-          title: "Old Man and the Sea",
-          covers: [
-          "https://cdn.dc5.ro/img-prod/182676-1.jpeg",
-          "https://www.antikavion.cz/storage/images/the-old-man-and-the-sea-ernest-hemingway-1963-483890-0.jpg",
-          "https://d28hgpri8am2if.cloudfront.net/tagged_assets/cvr9781476770185/old-man-and-the-sea-9781476770185_hr.jpg"
-          
-        ]
-        },
-        {
-          title: "van Gogh",
-          covers: [
-            "https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9780140446746%2F9780140446746-jacket-large.jpg&w=819&q=100",
-            "https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9780241752463%2F9780241752463-jacket-large.jpg&w=614&q=100",
-            
-        ]
-        },
-        {
-          title: "Prophet",
-          covers: [
-          "https://upload.wikimedia.org/wikipedia/commons/8/8a/The_Prophet_%28Gibran%29.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241573716/9780241573716-jacket-large.jpg",
-          "https://www.booktopia.com.au/covers/big/9781435167391/0727/the-prophet.jpg",
-        ]
-        },
-        {
-          title: "Mindfulness",
-          covers: [
-          "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781614294795/the-mindfulness-in-plain-english-collection-9781614294795_hr.jpg",
-        ]
-        },
-      ]
-    },
-    {
-      books: [
-        {
-          title: "Stories",
-          covers: [
-          "https://blackwells.co.uk/jacket/l/9781529039436.jpg",
-          ]
-        },
-        {
-          title: "Exhala",
-          covers: [
-          "https://cdn.dc5.ro/img-prod/544863047-0.jpeg",
-          "https://upload.wikimedia.org/wikipedia/en/2/22/Exhalation_-_Stories.jpg",
-          ]
-        },
-        {
-          title: "Paper",
-          covers: [
-          "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781481424363/the-paper-menagerie-and-other-stories-9781481424363_xlg.jpg"]
-        },
-        {
-          title: "San Ti",
-          covers: [
-          "https://blackwells.co.uk/jacket/500x500/9781803284958.webp",
-          "https://blackwells.co.uk/jacket/500x500/9781788543002.webp",
-          "https://blackwells.co.uk/jacket/500x500/9781788543019.webp",
-          "https://blackwells.co.uk/jacket/500x500/9781788543026.webp",
-          ]
-        },
-        {
-          title: "Jurassic",
-          covers: [
-          "https://prodimage.images-bn.com/pimages/9780307291844_p0_v2_s1200x1200.jpg",
-          "https://www.nocloo.com/wp-content/uploads/2020/08/mc-jurassic01.jpg",
-          "https://prodimage.images-bn.com/pimages/9780062227201_p0_v2_s1200x1200.jpg",
-          "https://prodimage.images-bn.com/pimages/9781101974490_p0_v2_s1200x1200.jpg"
-        ]
-        },
-      ]
-    },
-    {
-      books: [
-        {
-          title: "Shogun",
-          covers: [
-          "https://prodimage.images-bn.com/pimages/9798212173476_p0_v4_s600x595.jpg",
-          "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1614020204i/57175404.jpg"]
-        },
-        {
-          title: "Song of Ice and Fire",
-          covers: [
-          "https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/agameofthrones_2024_tr_repackage-1017x1536.jpg",
-          "https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/aclashofkings_2024_tr_repackage-1017x1536.jpg",
-          "https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/astormofswords_2024_tr_repackage-1017x1536.jpg",
-          "https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/afeastforcrows_2024_tr_repackage-1017x1536.jpg",
-          "https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/adancewithdragons_2024_tr_repackage-1017x1536.jpg",
-          "https://i.harperapps.com/hcuk/covers/9780008220587/x400.jpg",
+      },
+      {
+        books: [
+          {
+            title: "Earthsea",
+            covers: [
+              "https://upload.wikimedia.org/wikipedia/en/5/59/AWizardOfEarthsea%281stEd%29.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780141354910/9780141354910-jacket-large.jpg",
+              "https://store.gollancz.co.uk/cdn/shop/products/9781473223547-original.jpg",
+              "https://store.gollancz.co.uk/cdn/shop/products/9781473223592-original.jpg",
+              "https://store.gollancz.co.uk/cdn/shop/products/9781399602419-original.jpg",
+            ]
+          },
+          {
+            title: "Old Man and the Sea",
+            covers: [
+              "https://cdn.dc5.ro/img-prod/182676-1.jpeg",
+              "https://www.antikavion.cz/storage/images/the-old-man-and-the-sea-ernest-hemingway-1963-483890-0.jpg",
+              "https://d28hgpri8am2if.cloudfront.net/tagged_assets/cvr9781476770185/old-man-and-the-sea-9781476770185_hr.jpg"
 
+            ]
+          },
+          {
+            title: "Shogun",
+            covers: [
+              "https://prodimage.images-bn.com/pimages/9798212173476_p0_v4_s600x595.jpg",
+              "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1614020204i/57175404.jpg"]
+          },
+          {
+            title: "Song of Ice and Fire",
+            covers: [
+              "https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/agameofthrones_2024_tr_repackage-1017x1536.jpg",
+              "https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/adancewithdragons_2024_tr_repackage-1017x1536.jpg",
+              "https://i.harperapps.com/hcuk/covers/9780008220587/x400.jpg",
+
+            ]
+          },
+          {
+            title: "His Dark Materials",
+            covers: [
+              "https://upload.wikimedia.org/wikipedia/en/e/e3/HisDarkMaterials1stEdition.jpg",
+              "https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9781841593425%2F9781841593425-jacket-large.jpg&w=614&q=100",
+              "https://cdn.waterstones.com/bookjackets/large/9781/4071/9781407154169.jpg",
+              "https://cdn.waterstones.com/bookjackets/large/9781/4071/9781407153322.jpg",
+            ]
+          },
+          {
+            title: "Prophet",
+            covers: [
+              "https://upload.wikimedia.org/wikipedia/commons/8/8a/The_Prophet_%28Gibran%29.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241573716/9780241573716-jacket-large.jpg",
+              "https://www.booktopia.com.au/covers/big/9781435167391/0727/the-prophet.jpg",
+            ]
+          },
         ]
-        },
-        {
-          title: "His Dark Materials",
-          covers: [
-          "https://upload.wikimedia.org/wikipedia/en/e/e3/HisDarkMaterials1stEdition.jpg",
-          "https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9781841593425%2F9781841593425-jacket-large.jpg&w=614&q=100",
-          "https://cdn.waterstones.com/bookjackets/large/9781/4071/9781407154169.jpg",
-          "https://cdn.waterstones.com/bookjackets/large/9781/4071/9781407153322.jpg",
-          ]
-        },
-        {
-          title: "Millenium",
-          covers: [
-          "https://pictures.abebooks.com/inventory/31683963882_4.jpg"]
-        },
-        {
-          title: "Gojira",
-          covers: [
-          "https://isfdb.org/wiki/images/e/e0/ZRDTKSDLKW1955.jpg",
+      },
+      {
+        books: [
+          {
+            title: "Paper",
+            covers: [
+              "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781481424363/the-paper-menagerie-and-other-stories-9781481424363_xlg.jpg"]
+          },
+          {
+            title: "Stories",
+            covers: [
+              "https://blackwells.co.uk/jacket/l/9781529039436.jpg",
+            ]
+          },
+          {
+            title: "Exhala",
+            covers: [
+              "https://cdn.dc5.ro/img-prod/544863047-0.jpeg",
+              "https://upload.wikimedia.org/wikipedia/en/2/22/Exhalation_-_Stories.jpg",
+            ]
+          },
+          {
+            title: "San Ti",
+            covers: [
+              "https://blackwells.co.uk/jacket/500x500/9781803284958.webp",
+              "https://blackwells.co.uk/jacket/500x500/9781788543002.webp",
+              "https://blackwells.co.uk/jacket/500x500/9781788543019.webp",
+              "https://blackwells.co.uk/jacket/500x500/9781788543026.webp",
+            ]
+          },
+          {
+            title: "Jurassic",
+            covers: [
+              "https://prodimage.images-bn.com/pimages/9780307291844_p0_v2_s1200x1200.jpg",
+              "https://www.nocloo.com/wp-content/uploads/2020/08/mc-jurassic01.jpg",
+              "https://prodimage.images-bn.com/pimages/9780062227201_p0_v2_s1200x1200.jpg",
+              "https://prodimage.images-bn.com/pimages/9781101974490_p0_v2_s1200x1200.jpg"
+            ]
+          },
+          {
+            title: "Gojira",
+            covers: [
+              "https://isfdb.org/wiki/images/e/e0/ZRDTKSDLKW1955.jpg",
+            ]
+          },
         ]
-        },
-      ]
-    },
-    {
-      books: [
-        {
-          title: "Dracula",
-          covers: [
-          "https://cdn.penguin.co.uk/dam-assets/books/9780141196886/9780141196886-jacket-large.jpg", 
-          "https://cdn.penguin.co.uk/dam-assets/books/9781529954319/9781529954319-jacket-large.jpg", 
-          "https://www.penguinrandomhouse.co.za/sites/penguinbooks.co.za/files/cover/Dracula%20-%209780241411155.jpg"]
-        },
-        {
-          title: "Salem's Lot",
-          covers: [
-          "https://www.rollingstone.de/wp-content/uploads/2019/01/17/15/812i5mf-5pl.jpg",
-          "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2022/06/salems-lot.png"]
-        },
-        {
-          title: "Lafcadio Hearn",
-          covers: [
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241746875/9780241746875-jacket-large.jpg", 
-          "https://cdn.penguin.co.uk/dam-assets/books/9780241573723/9780241573723-jacket-large.jpg"]
-        },
-        {
-          title: "Liaozhai",
-          covers: [
-          "https://prodimage.images-bn.com/pimages/9781435169852_p0_v1_s600x595.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780141398174/9780141398174-jacket-large.jpg",
-          "https://cdn.penguin.co.uk/dam-assets/books/9780140447408/9780140447408-jacket-large.jpg"
+      },
+      {
+        books: [
+          {
+            title: "Dracula",
+            covers: [
+              "https://cdn.penguin.co.uk/dam-assets/books/9780141196886/9780141196886-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9781529954319/9781529954319-jacket-large.jpg",
+              "https://www.penguinrandomhouse.co.za/sites/penguinbooks.co.za/files/cover/Dracula%20-%209780241411155.jpg"]
+          },
+          {
+            title: "Salem's Lot",
+            covers: [
+              "https://www.rollingstone.de/wp-content/uploads/2019/01/17/15/812i5mf-5pl.jpg",
+              "https://www.hachette.co.uk/wp-content/uploads/2025/04/hbg-title-salems-lot-5-8.jpg"]
+          },
+          {
+            title: "Lafcadio Hearn",
+            covers: [
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241746875/9780241746875-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780241573723/9780241573723-jacket-large.jpg"]
+          },
+          {
+            title: "Liaozhai",
+            covers: [
+              "https://prodimage.images-bn.com/pimages/9781435169852_p0_v1_s600x595.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780141398174/9780141398174-jacket-large.jpg",
+              "https://cdn.penguin.co.uk/dam-assets/books/9780140447408/9780140447408-jacket-large.jpg"
+            ]
+          },
+          {
+            title: "van Gogh",
+            covers: [
+              "https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9780140446746%2F9780140446746-jacket-large.jpg&w=819&q=100",
+              "https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9780241752463%2F9780241752463-jacket-large.jpg&w=614&q=100",
+
+            ]
+          },
+          {
+            title: "Mindfulness",
+            covers: [
+              "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781614294795/the-mindfulness-in-plain-english-collection-9781614294795_hr.jpg",
+            ]
+          },
         ]
-        },
-      ]
-    },
-  ];
+      },
+    ];
 
-  const libraryContainer = document.getElementById('library');
+    const libraryContainer = document.getElementById('library');
 
-  shelves.forEach(shelf => {
-    const shelfDiv = document.createElement('div');
-    shelfDiv.className = 'shelf';
+    shelves.forEach(shelf => {
+      const shelfDiv = document.createElement('div');
+      shelfDiv.className = 'shelf';
 
-    shelf.books.forEach(book => {
-      // Randomly select a cover variant for this book
-      const randomCover = book.covers[Math.floor(Math.random() * book.covers.length)];
+      shelf.books.forEach(book => {
+        // Randomly select a cover variant for this book
+        const randomCover = book.covers[Math.floor(Math.random() * book.covers.length)];
 
-      const bookDiv = document.createElement('div');
-      bookDiv.className = 'book';
+        const bookDiv = document.createElement('div');
+        bookDiv.className = 'book';
 
-      const img = document.createElement('img');
-      img.src = randomCover;
-      img.className = 'cover';
+        const img = document.createElement('img');
+        img.src = randomCover;
+        img.className = 'cover';
 
-      const title = document.createElement('div');
-      title.className = 'title';
-      title.textContent = book.title;
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.textContent = book.title;
 
-      bookDiv.appendChild(img);
-      shelfDiv.appendChild(bookDiv);
+        bookDiv.appendChild(img);
+        shelfDiv.appendChild(bookDiv);
+      });
+
+      // Append the shelf to the library
+      libraryContainer.appendChild(shelfDiv);
     });
-
-    // Append the shelf to the library
-    libraryContainer.appendChild(shelfDiv);
-  });
-</script>
+  </script>
 </body>
 
 </html>
